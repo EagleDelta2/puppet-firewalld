@@ -35,14 +35,13 @@
 # Authors
 # -------
 #
-# Author Name <author@domain.com>
+# David Hollinger III <david.hollinger@moduletux.com>
 #
 # Copyright
 # ---------
 #
-# Copyright 2015 Your name here, unless otherwise noted.
+# Copyright 2015 David Hollinger III
 #
 class firewalld {
-
 
 }

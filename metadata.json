@@ -1,0 +1,14 @@
+{
+  "name": "EagleDelta2-firewalld",
+  "version": "0.1.0",
+  "author": "David Hollinger",
+  "summary": "Manage firewalld based firewall",
+  "license": "Apache-2.0",
+  "source": "https://github.com/EagleDelta2/puppet-firewalld.git",
+  "project_page": "https://github.com/EagleDelta2/puppet-firewalld",
+  "issues_url": "https://github.com/EagleDelta2/puppet-firewalld/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+

@@ -43,5 +43,6 @@
 # Copyright 2015 David Hollinger III
 #
 class firewalld {
-
+  class { 'firewalld::package': }
+  class { 'firewalld::service': }
 }

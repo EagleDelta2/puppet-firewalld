@@ -1,4 +1,4 @@
-Puppet::Type.type(:rule).provide(:ruby) do
+Puppet::Type.type(:firewall_rule).provide(:ruby) do
   desc "Placeholder docs"
   
   commands :firewall => "/usr/bin/firewall-cmd"

@@ -1,5 +1,3 @@
-require 'puppet/parameter/boolean'
-
 Puppet::Type.newtype(:rule) do
   @doc = %q{Manages firewalld basic rules}
   
@@ -10,20 +8,16 @@ Puppet::Type.newtype(:rule) do
   
   newparam(:name, :namevar => true) do
     desc "Rule name"
-    munge do |value|
-      value.downcase
-    end
   end
   
-  newparam(:permanent, :boolean => true, :parent => Puppet::Parameter::Boolean) do
+  newparam(:permanent) do
     desc "Will the rule persist firewall stops?"
+    newvalue(true, false)
   end
   
   newproperty(:port) do
     validate do |value|
-      unless value.to_i
-        raise ArgumentError, "#{value} is not a valid port number"
-      end
+      Integer(value)
     end
   end
   

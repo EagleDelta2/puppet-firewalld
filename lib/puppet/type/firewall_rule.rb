@@ -10,11 +10,6 @@ Puppet::Type.newtype(:firewall_rule) do
     desc "Rule name"
   end
   
-  newparam(:permanent) do
-    desc "Will the rule persist firewall stops?"
-    newvalue(true, false)
-  end
-  
   newproperty(:port) do
     validate do |value|
       Integer(value)

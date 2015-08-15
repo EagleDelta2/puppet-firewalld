@@ -1,4 +1,4 @@
-Puppet::Type.newtype(:firewall_rule) do
+Puppet::Type.newtype(:firewall_port) do
   @doc = %q{Manages firewalld basic rules}
   
   ensurable do
@@ -10,22 +10,14 @@ Puppet::Type.newtype(:firewall_rule) do
     desc "Rule name"
   end
   
-  newproperty(:port) do
+  newparam(:port) do
     validate do |value|
       Integer(value)
     end
   end
   
-  newproperty(:service) do
-    validate do |value|
-      unless value =~ /^\w+/
-        raise ArgumentError, "#{value} is not a valid service name"
-      end
-    end
-  end
-  
-  newproperty(:protocol) do
-    newvalue(:tcp, :udp)
+  newparam(:protocol) do
+    newvalues(:tcp, :udp)
     validate do |value|
       unless value =~ /^tcp|udp/
         raise ArgumentError, "#{value} is not a valid network protocol"

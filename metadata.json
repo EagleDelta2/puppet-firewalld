@@ -1,6 +1,6 @@
 {
   "name": "EagleDelta2-firewalld",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "author": "David Hollinger",
   "summary": "Manage firewalld based firewall",
   "license": "Apache-2.0",

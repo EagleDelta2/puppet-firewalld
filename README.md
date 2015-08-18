@@ -2,78 +2,75 @@
 
 #### Table of Contents
 
-1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with firewalld](#setup)
+1. [Description](#description)
+2. [Setup - The basics of getting started with firewalld](#setup)
     * [What firewalld affects](#what-firewalld-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with firewalld](#beginning-with-firewalld)
-4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
+3. [Usage](#usage)
+4. [Reference](#reference)
+5. [Limitations](#limitations)
+6. [Development](#development)
+7. [Contact](#contact)
 
-## Overview
+## Description
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
+The Firewalld module is designed to allow admins to easily setup firewall rules for
+Firewalld without having to know all the specific firewall-cmd syntax. This module will
+be designed to declare new rules however each individual user would prefer.
 
-## Module Description
-
-If applicable, this section should have a brief description of the technology
-the module integrates with and what that integration enables. This section
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?"
-
-If your module has a range of functionality (installation, configuration,
-management, etc.) this is the time to mention it.
+Initially version 1.0.0 will support declaring the new firewalld resource types within your
+various modules.
 
 ## Setup
 
 ### What firewalld affects
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
+* Installs Firewalld package
+* Manages the following files:
+  * /etc/firewalld/firewalld.conf
+* Manages the following rule types:
+  * Port-based rules
+  * Service-based rules
+  * WARNING: ONLY SUPPORTS DEFAULT ZONE RIGHT NOW.
+* Planned Features:
+  * Declare which zone to apply rules to.
+  * Create/Destroy new zones
+  * Create/Destroy custom Services
+  * Manage lockdown-whitelist file
+  * Manage firewall rules by XML file
+  * Manage Masquerade setting
+  * Manage Forward Ports
+  * Manage ICMP Blocks
+  * Support for additional Rule types:
+    * Interface-based rules
+    * Rich Rules
+    * IPTables-based rules (Firewalld version)
+    
+    
 
 ### Beginning with firewalld
 
-The very basic steps needed for a user to get the module up and running.
-
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+#### IN PROGRESS
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+#### IN PROGRESS
 
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module.
-This section should include all of the under-the-hood workings of your module so
-people know what the module is touching on their system but don't need to mess
-with things. (We are working on automating this section!)
+#### IN PROGRESS
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+Support for Fedora to start. Planned support for Enterprise Linux-based Distributions (RHEL, CentOS, Oracle), Ubuntu, Debian, and SuSe.
 
 ## Development
 
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
+Feel free to fork this module at your discrestion. If you'd like to contribute, please create an issue on Github and tie any Pull Requests you create to the associated Pull Request.
 
-## Release Notes/Contributors/Etc **Optional**
+## Contact
 
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You may also add any additional sections you feel are
-necessary or important to include here. Please use the `## ` header.
+David Hollinger: [david.hollinger@moduletux.com](mailto:david.hollinger@moduletux.com)
+
+

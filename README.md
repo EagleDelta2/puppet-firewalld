@@ -22,6 +22,8 @@ be designed to declare new rules however each individual user would prefer.
 Initially version 1.0.0 will support declaring the new firewalld resource types within your
 various modules.
 
+Future versions will also support declaring rules and new services using defined types and/or Hiera.
+
 ## Setup
 
 ### What firewalld affects

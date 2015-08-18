@@ -48,7 +48,7 @@ Future versions will also support declaring rules and new services using defined
 * Support for additional Rule types:
   * Interface-based rules
   * Rich Rules
-  * IPTables-based rules (Firewalld version)
+  * Direct rules (IPTables/IP6Tables-like rules)
     
     
 

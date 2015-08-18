@@ -1,4 +1,4 @@
-Puppet::Type.newtype(:firewall_port) do
+Puppet::Type.newtype(:firewalld_port) do
   @doc = %q{Manages firewalld basic rules}
   
   ensurable do

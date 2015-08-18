@@ -33,19 +33,20 @@ various modules.
   * Port-based rules
   * Service-based rules
   * WARNING: ONLY SUPPORTS DEFAULT ZONE RIGHT NOW.
-* Planned Features:
-  * Declare which zone to apply rules to.
-  * Create/Destroy new zones
-  * Create/Destroy custom Services
-  * Manage lockdown-whitelist file
-  * Manage firewall rules by XML file
-  * Manage Masquerade setting
-  * Manage Forward Ports
-  * Manage ICMP Blocks
-  * Support for additional Rule types:
-    * Interface-based rules
-    * Rich Rules
-    * IPTables-based rules (Firewalld version)
+
+## Planned Features:
+* Declare which zone to apply rules to.
+* Create/Destroy new zones
+* Create/Destroy custom Services
+* Manage lockdown-whitelist file
+* Manage firewall rules by XML file
+* Manage Masquerade setting
+* Manage Forward Ports
+* Manage ICMP Blocks
+* Support for additional Rule types:
+  * Interface-based rules
+  * Rich Rules
+  * IPTables-based rules (Firewalld version)
     
     
 

@@ -1,21 +1,21 @@
 Puppet::Type.newtype(:firewalld_port) do
   @doc = %q{Manages firewalld basic rules}
-  
+
   ensurable do
     defaultvalues
     defaultto :present
   end
-  
+
   newparam(:name, :namevar => true) do
     desc "Rule name"
   end
-  
+
   newparam(:port) do
     validate do |value|
       Integer(value)
     end
   end
-  
+
   newparam(:protocol) do
     newvalues(:tcp, :udp)
     validate do |value|
@@ -24,5 +24,5 @@ Puppet::Type.newtype(:firewalld_port) do
       end
     end
   end
-  
+
 end

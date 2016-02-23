@@ -1,4 +1,4 @@
-Puppet::Type.type(:firewalld_port).provide('firewall_cmd') do
+Puppet::Type.type(:firewalld_port).provide :firewall_cmd do
   commands :firewall_cmd => '/usr/bin/firewall-cmd'
 
   @rule="#{@resource[:port]}/#{@resource[:protocol]}"

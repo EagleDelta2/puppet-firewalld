@@ -8,13 +8,17 @@ Puppet::Type.type(:firewalld_port).provide('firewall_cmd') do
     raise Puppet::Error, "Failed to reload firewall changes for #{@resource[:service]} : #{cmd}" unless $?.success?
   end
 
-  def exists?
+  def query_port
     result = firewall_cmd('--query-port', @rule)
     if result == 'yes'
       true
     else
       false
     end
+  end
+
+  def exists?
+    query_port
   end
 
   def create

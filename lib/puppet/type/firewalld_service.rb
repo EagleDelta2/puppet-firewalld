@@ -13,5 +13,4 @@ Puppet::Type.newtype(:firewalld_service) do
   newparam(:service) do
     desc "Service"
   end
-
 end

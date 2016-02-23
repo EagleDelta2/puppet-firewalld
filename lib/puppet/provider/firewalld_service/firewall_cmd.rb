@@ -1,5 +1,4 @@
 Puppet::Type.type(:firewalld_service).provide('firewall_cmd') do
-
   commands :firewall_cmd => '/usr/bin/firewalld'
 
   def exists?
@@ -17,5 +16,4 @@ Puppet::Type.type(:firewalld_service).provide('firewall_cmd') do
     firewall_cmd('--permanent','--add-service', rule)
     firewall_cmd('--reload')
   end
-
 end

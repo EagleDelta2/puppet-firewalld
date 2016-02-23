@@ -24,5 +24,4 @@ Puppet::Type.newtype(:firewalld_port) do
       end
     end
   end
-
 end

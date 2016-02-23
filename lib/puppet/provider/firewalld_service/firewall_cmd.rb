@@ -6,8 +6,17 @@ Puppet::Type.type(:firewalld_service).provide('firewall_cmd') do
     raise Puppet::Error, "Failed to reload firewall changes for #{@resource[:service]} : #{output}" unless $?.success?
   end
 
+  def query_service
+    result = firewall_cmd('--query-service', @resource[:service])
+    if result == 'yes'
+      true
+    else
+      false
+    end
+  end
+
   def exists?
-    firewall_cmd('--list-services').split(' ').include?(@resource[:service])
+    query_service
   end
 
   def create
